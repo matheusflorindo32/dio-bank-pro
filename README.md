@@ -571,7 +571,7 @@ console.log(`Saldo: ${bonusAccount.getBalance()}`) // 550
 💻 Desenvolvedor Full Stack | 🎖️ Policial Militar | 📚 Pesquisador
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/matheusflorindo32)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/matheusflorindo)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-florindo-de-deus-b953b017a/)
 
 *Projeto desenvolvido como evolução do desafio da Digital Innovation One.*
 
