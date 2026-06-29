@@ -1,7 +1,7 @@
 <div align="center">
 
-<!-- Premium Animated Banner SVG -->
-<img src="./assets/banner.svg" width="100%" alt="DIO Bank Pro Banner" />
+<!-- Premium AI-Generated Banner -->
+<img src="./assets/banner.jpg" width="100%" alt="DIO Bank Pro - Futuristic Banking Terminal" />
 
 <br><br>
 
