@@ -471,7 +471,9 @@ console.log(bonusAccount.getBalance()) // 550
 
 **Matheus Florindo de Deus**
 
-🎓 Student of Systems Analysis and Development — IFES | 🎓 Licensed in Physical Education — UniVitória | 💻 Full Stack Developer | 📚 Researcher
+🎓 Student of Systems Analysis and Development — IFES  
+🎓 Licensed in Physical Education — UniVitória  
+💻 Full Stack Developer | 📚 Researcher
 
 <br>
 
@@ -495,6 +497,6 @@ console.log(bonusAccount.getBalance()) // 550
 
 <br>
 
-**© 2024 Matheus Florindo de Deus — [MIT License](./LICENSE)**
+**© 2026 Matheus Florindo de Deus — [MIT License](./LICENSE)**
 
 </div>
