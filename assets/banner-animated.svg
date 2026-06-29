@@ -1,0 +1,467 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#0f1623"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="cyber-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#00bbf9" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#9b5de5" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="grid-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00f5d4" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#00f5d4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="50%" stop-color="#ffb700"/>
+      <stop offset="100%" stop-color="#ffd700"/>
+    </linearGradient>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1a1f2e" stop-opacity="0.9"/>
+    </linearGradient>
+    
+    <!-- Glow filters -->
+    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-purple" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Card shadow -->
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#00f5d4" flood-opacity="0.15"/>
+    </filter>
+
+    <!-- Patterns -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#00f5d4" stroke-width="0.5" opacity="0.08"/>
+    </pattern>
+    <pattern id="hex-grid" width="40" height="69.28" patternUnits="userSpaceOnUse" patternTransform="scale(0.6)">
+      <path d="M20 0 L40 11.55 L40 34.64 L20 46.19 L0 34.64 L0 11.55 Z" fill="none" stroke="#00f5d4" stroke-width="0.3" opacity="0.06"/>
+    </pattern>
+
+    <!-- Clip path for cards -->
+    <clipPath id="card-clip">
+      <rect x="0" y="0" width="160" height="70" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bg-grad)"/>
+  
+  <!-- Animated grid background -->
+  <rect width="1200" height="400" fill="url(#grid)" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect width="1200" height="400" fill="url(#hex-grid)" opacity="0.6"/>
+  
+  <!-- Perspective grid floor -->
+  <g opacity="0.15">
+    <path d="M0 300 L200 400 M0 250 L400 400 M0 200 L600 400 M0 150 L800 400 M0 100 L1000 400 M0 50 L1200 400" stroke="#00f5d4" stroke-width="0.5">
+      <animate attributeName="opacity" values="0.1;0.25;0.1" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1200 300 L1000 400 M1200 250 L800 400 M1200 200 L600 400 M1200 150 L400 400 M1200 100 L200 400 M1200 50 L0 400" stroke="#00f5d4" stroke-width="0.5">
+      <animate attributeName="opacity" values="0.1;0.25;0.1" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </path>
+    <line x1="0" y1="350" x2="1200" y2="350" stroke="#00f5d4" stroke-width="0.3">
+      <animate attributeName="y1" values="350;400;350" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="350;400;350" dur="5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Cyber lines -->
+  <g opacity="0.2">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#00bbf9" stroke-width="1">
+      <animate attributeName="y1" values="100;105;100" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="100;105;100" dur="6s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#9b5de5" stroke-width="1">
+      <animate attributeName="y1" values="300;295;300" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="300;295;300" dur="5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Animated particles -->
+  <g>
+    <circle cx="100" cy="80" r="2" fill="#00f5d4" opacity="0.8">
+      <animate attributeName="cy" values="80;60;80" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="120" r="1.5" fill="#00bbf9" opacity="0.6">
+      <animate attributeName="cy" values="120;100;120" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="500" cy="60" r="2" fill="#9b5de5" opacity="0.7">
+      <animate attributeName="cy" values="60;40;60" dur="3.5s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="opacity" values="0.7;0;0.7" dur="3.5s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <circle cx="700" cy="90" r="1.5" fill="#00f5d4" opacity="0.5">
+      <animate attributeName="cy" values="90;70;90" dur="4.5s" repeatCount="indefinite" begin="1.5s"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="4.5s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+    <circle cx="900" cy="70" r="2" fill="#00bbf9" opacity="0.8">
+      <animate attributeName="cy" values="70;50;70" dur="3s" repeatCount="indefinite" begin="2s"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite" begin="2s"/>
+    </circle>
+    <circle cx="1100" cy="110" r="1.5" fill="#ffd700" opacity="0.6">
+      <animate attributeName="cy" values="110;90;110" dur="5s" repeatCount="indefinite" begin="0.8s"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="5s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+    <circle cx="200" cy="320" r="2" fill="#9b5de5" opacity="0.7">
+      <animate attributeName="cy" values="320;300;320" dur="3.5s" repeatCount="indefinite" begin="0.3s"/>
+      <animate attributeName="opacity" values="0.7;0;0.7" dur="3.5s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="400" cy="340" r="1.5" fill="#00f5d4" opacity="0.5">
+      <animate attributeName="cy" values="340;320;340" dur="4s" repeatCount="indefinite" begin="1.2s"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="4s" repeatCount="indefinite" begin="1.2s"/>
+    </circle>
+    <circle cx="600" cy="330" r="2" fill="#00bbf9" opacity="0.8">
+      <animate attributeName="cy" values="330;310;330" dur="3s" repeatCount="indefinite" begin="1.8s"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite" begin="1.8s"/>
+    </circle>
+    <circle cx="800" cy="310" r="1.5" fill="#ffd700" opacity="0.6">
+      <animate attributeName="cy" values="310;290;310" dur="5s" repeatCount="indefinite" begin="0.6s"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="5s" repeatCount="indefinite" begin="0.6s"/>
+    </circle>
+    <circle cx="1000" cy="340" r="2" fill="#9b5de5" opacity="0.7">
+      <animate attributeName="cy" values="340;320;340" dur="4.5s" repeatCount="indefinite" begin="2.2s"/>
+      <animate attributeName="opacity" values="0.7;0;0.7" dur="4.5s" repeatCount="indefinite" begin="2.2s"/>
+    </circle>
+  </g>
+
+  <!-- Corner decorations -->
+  <g stroke="#00f5d4" stroke-width="1" fill="none" opacity="0.3">
+    <!-- Top-left -->
+    <path d="M20 20 L60 20 L60 40">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <!-- Top-right -->
+    <path d="M1180 20 L1140 20 L1140 40">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+    </path>
+    <!-- Bottom-left -->
+    <path d="M20 380 L60 380 L60 360">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </path>
+    <!-- Bottom-right -->
+    <path d="M1180 380 L1140 380 L1140 360">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </path>
+  </g>
+
+  <!-- ============ TITLE SECTION ============ -->
+  <g transform="translate(0, 30)">
+    <!-- Bank icon -->
+    <g transform="translate(70, 25)">
+      <rect x="0" y="15" width="30" height="20" rx="3" fill="none" stroke="url(#gold-grad)" stroke-width="1.5" filter="url(#glow-gold)">
+        <animate attributeName="stroke-opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      <polygon points="15,0 25,15 5,15" fill="none" stroke="url(#gold-grad)" stroke-width="1.5" filter="url(#glow-gold)"/>
+      <rect x="6" y="22" width="6" height="13" rx="1" fill="#ffd700" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="1.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="18" y="22" width="6" height="13" rx="1" fill="#ffd700" opacity="0.7">
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="1.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Title text -->
+    <text x="115" y="45" font-family="'Courier New', monospace" font-size="32" font-weight="bold" fill="url(#gold-grad)" filter="url(#glow-gold)">
+      DIO Bank Pro
+    </text>
+    <text x="115" y="65" font-family="'Courier New', monospace" font-size="11" fill="#00f5d4" letter-spacing="4" opacity="0.8">
+      <tspan>
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+      </tspan>
+      ◇ PREMIUM BANKING TERMINAL ◇
+    </text>
+
+    <!-- Animated typing line -->
+    <rect x="115" y="72" width="0" height="2" fill="#00f5d4" opacity="0.6">
+      <animate attributeName="width" values="0;320;320;0" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="115;115;435;115" dur="4s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Subtitle -->
+    <text x="115" y="88" font-family="'Segoe UI', sans-serif" font-size="10" fill="#8b9bb4" letter-spacing="1">
+      TypeScript ◆ Clean Architecture ◆ 100% Test Coverage ◆ Production-Ready
+    </text>
+  </g>
+
+  <!-- ============ TECH CARDS ============ -->
+  <!-- Card 1: TypeScript -->
+  <g transform="translate(80, 130)" filter="url(#card-shadow)">
+    <rect width="160" height="70" rx="10" fill="url(#card-bg)" stroke="#3178C6" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#3178C6" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="55" y="28" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#3178C6">TypeScript</text>
+    <text x="55" y="45" font-family="'Segoe UI', sans-serif" font-size="9" fill="#8b9bb4">Strict Mode</text>
+    <text x="55" y="58" font-family="'Segoe UI', sans-serif" font-size="8" fill="#00f5d4" opacity="0.7">◆ Core</text>
+    <!-- TS Logo -->
+    <g transform="translate(18, 22)">
+      <rect x="0" y="0" width="24" height="24" rx="4" fill="#3178C6"/>
+      <text x="12" y="17" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">TS</text>
+    </g>
+  </g>
+
+  <!-- Card 2: Node.js -->
+  <g transform="translate(260, 130)" filter="url(#card-shadow)">
+    <rect width="160" height="70" rx="10" fill="url(#card-bg)" stroke="#339933" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#339933" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2.5s" repeatCount="indefinite" begin="0.3s"/>
+    </rect>
+    <text x="55" y="28" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#339933">Node.js</text>
+    <text x="55" y="45" font-family="'Segoe UI', sans-serif" font-size="9" fill="#8b9bb4">Runtime</text>
+    <text x="55" y="58" font-family="'Segoe UI', sans-serif" font-size="8" fill="#00f5d4" opacity="0.7">◆ Core</text>
+    <!-- Node Logo -->
+    <g transform="translate(20, 22) scale(0.6)">
+      <path d="M20 0 L40 11.5 L40 34.5 L20 46 L0 34.5 L0 11.5 Z" fill="#339933"/>
+      <path d="M20 5 L35 13.5 L35 32.5 L20 41 L5 32.5 L5 13.5 Z" fill="#0a0e1a"/>
+      <text x="20" y="28" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#339933" text-anchor="middle">N</text>
+    </g>
+  </g>
+
+  <!-- Card 3: Vitest -->
+  <g transform="translate(440, 130)" filter="url(#card-shadow)">
+    <rect width="160" height="70" rx="10" fill="url(#card-bg)" stroke="#6E9F18" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </rect>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#6E9F18" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+    </rect>
+    <text x="55" y="28" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#6E9F18">Vitest</text>
+    <text x="55" y="45" font-family="'Segoe UI', sans-serif" font-size="9" fill="#8b9bb4">Testing</text>
+    <text x="55" y="58" font-family="'Segoe UI', sans-serif" font-size="8" fill="#ffd700" opacity="0.7">✓ 39 Tests</text>
+    <!-- Vitest Logo -->
+    <g transform="translate(20, 24)">
+      <polygon points="10,0 20,6 20,18 10,24 0,18 0,6" fill="#6E9F18"/>
+      <text x="10" y="16" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">V</text>
+    </g>
+  </g>
+
+  <!-- Card 4: GitHub Actions -->
+  <g transform="translate(620, 130)" filter="url(#card-shadow)">
+    <rect width="160" height="70" rx="10" fill="url(#card-bg)" stroke="#2088FF" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite" begin="1.5s"/>
+    </rect>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#2088FF" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2.5s" repeatCount="indefinite" begin="1.2s"/>
+    </rect>
+    <text x="55" y="24" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#2088FF">GitHub</text>
+    <text x="55" y="38" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#2088FF">Actions</text>
+    <text x="55" y="55" font-family="'Segoe UI', sans-serif" font-size="8" fill="#00f5d4" opacity="0.7">◆ CI/CD</text>
+    <!-- Actions Logo -->
+    <g transform="translate(22, 26)">
+      <circle cx="8" cy="8" r="6" fill="none" stroke="#2088FF" stroke-width="1.5"/>
+      <circle cx="8" cy="8" r="2" fill="#2088FF"/>
+      <path d="M14 8 L18 8" stroke="#2088FF" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M16 6 L18 8 L16 10" stroke="#2088FF" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Card 5: ESLint -->
+  <g transform="translate(800, 130)" filter="url(#card-shadow)">
+    <rect width="160" height="70" rx="10" fill="url(#card-bg)" stroke="#4B32C3" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" begin="2s"/>
+    </rect>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#4B32C3" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+    </rect>
+    <text x="55" y="28" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#4B32C3">ESLint</text>
+    <text x="55" y="45" font-family="'Segoe UI', sans-serif" font-size="9" fill="#8b9bb4">Linting</text>
+    <text x="55" y="58" font-family="'Segoe UI', sans-serif" font-size="8" fill="#00f5d4" opacity="0.7">◆ Quality</text>
+    <!-- ESLint Logo -->
+    <g transform="translate(20, 22)">
+      <polygon points="12,0 24,7 24,21 12,28 0,21 0,7" fill="#4B32C3"/>
+      <text x="12" y="18" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">E</text>
+    </g>
+  </g>
+
+  <!-- Card 6: Prettier -->
+  <g transform="translate(980, 130)" filter="url(#card-shadow)">
+    <rect width="160" height="70" rx="10" fill="url(#card-bg)" stroke="#F7B93E" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite" begin="2.5s"/>
+    </rect>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#F7B93E" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2.5s" repeatCount="indefinite" begin="2s"/>
+    </rect>
+    <text x="55" y="28" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#F7B93E">Prettier</text>
+    <text x="55" y="45" font-family="'Segoe UI', sans-serif" font-size="9" fill="#8b9bb4">Formatting</text>
+    <text x="55" y="58" font-family="'Segoe UI', sans-serif" font-size="8" fill="#00f5d4" opacity="0.7">◆ Quality</text>
+    <!-- Prettier Logo -->
+    <g transform="translate(20, 22)">
+      <rect x="0" y="0" width="24" height="24" rx="12" fill="#F7B93E"/>
+      <path d="M6 8 L18 8 M6 12 L18 12 M6 16 L18 16" stroke="#1a1f2e" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Card 7: Vite (centered below) -->
+  <g transform="translate(520, 220)" filter="url(#card-shadow)">
+    <rect width="160" height="70" rx="10" fill="url(#card-bg)" stroke="#646CFF" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" begin="3s"/>
+    </rect>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#646CFF" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite" begin="2.5s"/>
+    </rect>
+    <text x="55" y="28" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#646CFF">Vite</text>
+    <text x="55" y="45" font-family="'Segoe UI', sans-serif" font-size="9" fill="#8b9bb4">Build Tool</text>
+    <text x="55" y="58" font-family="'Segoe UI', sans-serif" font-size="8" fill="#00f5d4" opacity="0.7">◆ DevOps</text>
+    <!-- Vite Logo -->
+    <g transform="translate(20, 22)">
+      <polygon points="12,2 22,22 2,22" fill="#646CFF"/>
+      <polygon points="12,8 18,20 6,20" fill="#ffd700" opacity="0.9"/>
+    </g>
+  </g>
+
+  <!-- Animated connecting lines between cards -->
+  <g stroke="#00f5d4" stroke-width="0.5" opacity="0.2" fill="none">
+    <path d="M240 165 L260 165">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M420 165 L440 165">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+    </path>
+    <path d="M600 165 L620 165">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+    </path>
+    <path d="M780 165 L800 165">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite" begin="0.9s"/>
+    </path>
+    <path d="M960 165 L980 165">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+    </path>
+  </g>
+
+  <!-- ============ STATS BAR ============ -->
+  <g transform="translate(0, 310)">
+    <rect x="200" y="0" width="800" height="50" rx="8" fill="url(#card-bg)" stroke="#00f5d4" stroke-width="0.5" opacity="0.8"/>
+    
+    <!-- Stat 1 -->
+    <text x="320" y="22" font-family="'Courier New', monospace" font-size="18" font-weight="bold" fill="#ffd700" text-anchor="middle" filter="url(#glow-gold)">
+      39
+      <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite"/>
+    </text>
+    <text x="320" y="40" font-family="'Segoe UI', sans-serif" font-size="9" fill="#8b9bb4" text-anchor="middle">Tests</text>
+    
+    <!-- Divider -->
+    <line x1="420" y1="10" x2="420" y2="40" stroke="#00f5d4" stroke-width="0.5" opacity="0.3"/>
+    
+    <!-- Stat 2 -->
+    <text x="500" y="22" font-family="'Courier New', monospace" font-size="18" font-weight="bold" fill="#00f5d4" text-anchor="middle" filter="url(#glow-cyan)">
+      100%
+      <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+    </text>
+    <text x="500" y="40" font-family="'Segoe UI', sans-serif" font-size="9" fill="#8b9bb4" text-anchor="middle">Coverage</text>
+    
+    <!-- Divider -->
+    <line x1="600" y1="10" x2="600" y2="40" stroke="#00f5d4" stroke-width="0.5" opacity="0.3"/>
+    
+    <!-- Stat 3 -->
+    <text x="680" y="22" font-family="'Courier New', monospace" font-size="18" font-weight="bold" fill="#9b5de5" text-anchor="middle" filter="url(#glow-purple)">
+      4
+      <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </text>
+    <text x="680" y="40" font-family="'Segoe UI', sans-serif" font-size="9" fill="#8b9bb4" text-anchor="middle">Layers</text>
+    
+    <!-- Divider -->
+    <line x1="780" y1="10" x2="780" y2="40" stroke="#00f5d4" stroke-width="0.5" opacity="0.3"/>
+    
+    <!-- Stat 4 -->
+    <text x="860" y="22" font-family="'Courier New', monospace" font-size="18" font-weight="bold" fill="#00bbf9" text-anchor="middle">
+      TS
+      <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </text>
+    <text x="860" y="40" font-family="'Segoe UI', sans-serif" font-size="9" fill="#8b9bb4" text-anchor="middle">Strict</text>
+  </g>
+
+  <!-- ============ FOOTER ============ -->
+  <g transform="translate(0, 375)">
+    <text x="600" y="12" font-family="'Courier New', monospace" font-size="10" fill="#00f5d4" text-anchor="middle" letter-spacing="3" opacity="0.6">
+      ◆ CLEAN ARCHITECTURE ◆ SOLID ◆ OOP ◆ TYPESCRIPT ◆
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="4s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Animated scan line -->
+  <rect x="0" y="0" width="1200" height="2" fill="#00f5d4" opacity="0.1">
+    <animate attributeName="y" values="0;400;0" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Glitch effect on title (subtle) -->
+  <g opacity="0.3">
+    <text x="117" y="45" font-family="'Courier New', monospace" font-size="32" font-weight="bold" fill="#ff0055" text-anchor="start">
+      <animate attributeName="x" values="117;115;117" dur="0.3s" repeatCount="indefinite"/>
+      DIO Bank Pro
+    </text>
+  </g>
+  <g opacity="0.3">
+    <text x="113" y="45" font-family="'Courier New', monospace" font-size="32" font-weight="bold" fill="#00f5d4" text-anchor="start">
+      <animate attributeName="x" values="113;115;113" dur="0.3s" repeatCount="indefinite"/>
+      DIO Bank Pro
+    </text>
+  </g>
+
+  <!-- Floating code snippets -->
+  <g opacity="0.15" font-family="'Courier New', monospace" font-size="7" fill="#00f5d4">
+    <text x="50" y="200">
+      <animate attributeName="y" values="200;180;200" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.05;0.15" dur="6s" repeatCount="indefinite"/>
+      class Account { }
+    </text>
+    <text x="1050" y="250">
+      <animate attributeName="y" values="250;230;250" dur="5s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="opacity" values="0.15;0.05;0.15" dur="5s" repeatCount="indefinite" begin="1s"/>
+      deposit(amount: number)
+    </text>
+    <text x="150" y="280">
+      <animate attributeName="y" values="280;260;280" dur="7s" repeatCount="indefinite" begin="2s"/>
+      <animate attributeName="opacity" values="0.15;0.05;0.15" dur="7s" repeatCount="indefinite" begin="2s"/>
+      interface IAccount { }
+    </text>
+  </g>
+
+  <!-- Data particles flowing -->
+  <g>
+    <rect x="0" y="180" width="8" height="2" rx="1" fill="#00f5d4" opacity="0.6">
+      <animate attributeName="x" values="0;1200" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="10s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="240" width="6" height="2" rx="1" fill="#9b5de5" opacity="0.5">
+      <animate attributeName="x" values="0;1200" dur="8s" repeatCount="indefinite" begin="2s"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="8s" repeatCount="indefinite" begin="2s"/>
+    </rect>
+    <rect x="0" y="200" width="10" height="2" rx="1" fill="#00bbf9" opacity="0.4">
+      <animate attributeName="x" values="0;1200" dur="12s" repeatCount="indefinite" begin="4s"/>
+      <animate attributeName="opacity" values="0.4;0;0.4" dur="12s" repeatCount="indefinite" begin="4s"/>
+    </rect>
+  </g>
+</svg>
