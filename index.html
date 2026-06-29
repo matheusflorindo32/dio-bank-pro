@@ -5,20 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIO Bank Pro — Premium Banking System</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0a0e1a;
-      --bg-card: #111827;
+      --bg: #050505;
+      --bg-elevated: #0a0a0f;
+      --bg-card: rgba(255, 255, 255, 0.03);
+      --bg-card-hover: rgba(255, 255, 255, 0.06);
       --text: #e2e8f0;
-      --text-muted: #94a3b8;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
       --accent: #00f5d4;
       --accent-secondary: #00bbf9;
       --accent-tertiary: #9b5de5;
-      --border: #1e293b;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(0, 245, 212, 0.3);
+      --gradient-1: linear-gradient(135deg, #00f5d4, #00bbf9);
+      --gradient-2: linear-gradient(135deg, #9b5de5, #00f5d4);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -26,285 +34,668 @@
       color: var(--text);
       line-height: 1.6;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    .hero {
-      text-align: center;
-      padding: 60px 20px 40px;
-      background: linear-gradient(135deg, #0a0e1a 0%, #111827 50%, #0a0e1a 100%);
+    /* Noise texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Gradient orbs */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-1 {
+      width: 600px; height: 600px;
+      background: var(--accent);
+      top: -200px; left: -200px;
+      animation: float 20s ease-in-out infinite;
+    }
+    .orb-2 {
+      width: 500px; height: 500px;
+      background: var(--accent-tertiary);
+      bottom: -150px; right: -150px;
+      animation: float 25s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -30px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 16px 0;
+      backdrop-filter: blur(20px);
+      background: rgba(5, 5, 5, 0.8);
       border-bottom: 1px solid var(--border);
     }
-
-    .hero img {
-      max-width: 900px;
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 20px 60px rgba(0, 245, 212, 0.1);
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-top: 30px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+    .logo {
+      font-weight: 800;
+      font-size: 1.3rem;
+      background: var(--gradient-1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      letter-spacing: -0.5px;
     }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      margin-top: 10px;
-    }
-
-    .badges {
+    .nav-links {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 25px;
+      gap: 32px;
+      align-items: center;
     }
-
-    .badge {
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.85rem;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: 8px;
       font-weight: 600;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      color: var(--text);
+      font-size: 0.9rem;
       text-decoration: none;
-      transition: all 0.2s;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
     }
-
-    .badge:hover {
-      border-color: var(--accent);
+    .btn-primary {
+      background: var(--gradient-1);
+      color: var(--bg);
+      box-shadow: 0 4px 20px rgba(0, 245, 212, 0.3);
+    }
+    .btn-primary:hover {
       transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 245, 212, 0.4);
     }
-
-    .badge svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .content {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .section p { color: var(--text-muted); margin-bottom: 10px; }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .feature {
-      background: var(--bg-card);
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px;
-      transition: all 0.2s;
     }
-
-    .feature:hover {
+    .btn-secondary:hover {
       border-color: var(--accent);
-      transform: translateY(-3px);
+      color: var(--accent);
     }
 
-    .feature h3 {
-      font-size: 1rem;
-      color: var(--accent-secondary);
-      margin-bottom: 8px;
+    /* Hero */
+    .hero {
+      padding: 140px 0 80px;
+      text-align: center;
     }
-
-    .feature p { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
-
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 15px;
-    }
-
-    .tech {
-      display: flex;
+    .hero-badge {
+      display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 8px 16px;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 32px;
+      animation: fadeInUp 0.6s ease;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      animation: fadeInUp 0.6s ease 0.1s both;
+    }
+    .hero h1 .gradient-text {
+      background: var(--gradient-2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      animation: fadeInUp 0.6s ease 0.2s both;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      animation: fadeInUp 0.6s ease 0.3s both;
+    }
+    .hero-banner {
+      margin-top: 60px;
+      position: relative;
+      animation: fadeInUp 0.6s ease 0.4s both;
+    }
+    .hero-banner img {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 16px;
+      box-shadow: 0 30px 80px rgba(0, 245, 212, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: 50%;
+      transform: translateX(-50%);
+      width: 80%; height: 60px;
+      background: var(--accent);
+      filter: blur(60px);
+      opacity: 0.2;
+      border-radius: 50%;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Stats */
+    .stats {
+      padding: 60px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+    .stat h3 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+    .stat p {
+      color: var(--text-muted);
       font-size: 0.9rem;
     }
 
-    .tech img { height: 20px; }
-
-    .cta {
-      text-align: center;
-      padding: 40px;
-      background: var(--bg-card);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      margin-top: 30px;
+    /* Features */
+    .features {
+      padding: 100px 0;
     }
-
-    .cta a {
-      display: inline-block;
-      padding: 12px 28px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
-      color: var(--bg);
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-header h2 {
+      font-size: 2rem;
       font-weight: 700;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.2s;
-      margin: 5px;
+      margin-bottom: 12px;
     }
-
-    .cta a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 245, 212, 0.3);
+    .section-header p {
+      color: var(--text-secondary);
+      max-width: 500px;
+      margin: 0 auto;
     }
-
-    .cta .secondary {
-      background: transparent;
-      border: 1px solid var(--accent);
-      color: var(--accent);
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
     }
-
-    .footer {
-      text-align: center;
-      padding: 30px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-      margin-top: 40px;
-    }
-
-    .code-block {
-      background: #1a1f2e;
+    .feature-card {
+      background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 20px;
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gradient-1);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    .feature-card:hover::before { transform: scaleX(1); }
+    .feature-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    .feature-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      background: rgba(0, 245, 212, 0.1);
+      border: 1px solid rgba(0, 245, 212, 0.2);
+    }
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Terminal */
+    .terminal-section {
+      padding: 100px 0;
+    }
+    .terminal-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .terminal {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    }
+    .terminal-header {
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-red { background: #ff5f56; }
+    .dot-yellow { background: #ffbd2e; }
+    .dot-green { background: #27c93f; }
+    .terminal-title {
+      margin-left: 8px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .terminal-body {
+      padding: 24px;
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.85rem;
-      overflow-x: auto;
-      margin-top: 15px;
+      line-height: 1.8;
+    }
+    .terminal-line { margin-bottom: 4px; }
+    .terminal-prompt { color: var(--accent); }
+    .terminal-command { color: var(--text); }
+    .terminal-comment { color: var(--text-muted); }
+    .terminal-output { color: var(--accent-secondary); }
+    .cursor {
+      display: inline-block;
+      width: 8px; height: 16px;
+      background: var(--accent);
+      animation: blink 1s infinite;
+      vertical-align: middle;
+      margin-left: 2px;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
-    .code-block .comment { color: #6b7280; }
-    .code-block .cmd { color: var(--accent); }
-    .code-block .output { color: var(--accent-secondary); }
+    /* Tech Stack */
+    .tech-stack {
+      padding: 100px 0;
+      border-top: 1px solid var(--border);
+    }
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .tech-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    .tech-item:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+    .tech-item img { height: 24px; width: 24px; }
+    .tech-item span { font-size: 0.9rem; font-weight: 500; }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.8rem; }
-      .features { grid-template-columns: 1fr; }
+    /* CTA */
+    .cta {
+      padding: 100px 0;
+      text-align: center;
+    }
+    .cta-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 60px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: var(--gradient-1);
+    }
+    .cta h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .cta p {
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero { padding: 120px 0 60px; }
+      .hero-actions { flex-direction: column; align-items: center; }
+      .hero-actions .btn { width: 100%; max-width: 280px; justify-content: center; }
+      .stats-grid { gap: 24px; }
+      .stat h3 { font-size: 2rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .cta-box { padding: 40px 24px; }
+      .cta h2 { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <img src="./assets/banner.jpg" alt="DIO Bank Pro Banner">
-    <h1>DIO Bank Pro</h1>
-    <p>Premium Banking System — TypeScript, Clean Architecture & SOLID</p>
-    <div class="badges">
-      <span class="badge">⚡ TypeScript</span>
-      <span class="badge">🏗️ Clean Architecture</span>
-      <span class="badge">🧪 39 Tests</span>
-      <span class="badge">📦 Node.js</span>
-      <span class="badge">✅ CI/CD</span>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="container">
+      <div class="logo">DIO Bank Pro</div>
+      <div class="nav-links">
+        <a href="#features">Funcionalidades</a>
+        <a href="#stack">Tech Stack</a>
+        <a href="https://github.com/matheusflorindo32/dio-bank-pro" target="_blank">GitHub</a>
+        <a href="https://github.com/matheusflorindo32/dio-bank-pro#readme" class="btn btn-primary">Documentação</a>
+      </div>
     </div>
-  </div>
+  </nav>
 
-  <div class="content">
-
-    <div class="section">
-      <h2>🎯 Sobre</h2>
-      <p>O <strong>DIO Bank Pro</strong> é uma evolução premium do desafio TypeScript da Digital Innovation One. Aplica <strong>Clean Architecture</strong>, <strong>princípios SOLID</strong>, <strong>OOP avançado</strong> e <strong>testes automatizados</strong> em um sistema bancário completo.</p>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">Sistema Bancário em TypeScript</div>
+      <h1>
+        Premium Banking<br>
+        <span class="gradient-text">System</span>
+      </h1>
+      <p>Clean Architecture, SOLID, OOP avançado e 39 testes automatizados. Uma evolução profissional do desafio DIO Bank.</p>
+      <div class="hero-actions">
+        <a href="https://github.com/matheusflorindo32/dio-bank-pro" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          Ver no GitHub
+        </a>
+        <a href="#terminal" class="btn btn-secondary">Quick Start</a>
+      </div>
+      <div class="hero-banner">
+        <img src="./assets/banner.jpg" alt="DIO Bank Pro - Futuristic Banking Terminal">
+      </div>
     </div>
+  </section>
 
-    <div class="section">
-      <h2>🏦 Funcionalidades</h2>
-      <div class="features">
-        <div class="feature">
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat">
+          <h3>39</h3>
+          <p>Testes Automatizados</p>
+        </div>
+        <div class="stat">
+          <h3>4</h3>
+          <p>Camadas de Arquitetura</p>
+        </div>
+        <div class="stat">
+          <h3>100%</h3>
+          <p>TypeScript Strict</p>
+        </div>
+        <div class="stat">
+          <h3>3</h3>
+          <p>Tipos de Conta</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Arquitetura de Produção</h2>
+        <p>Cada funcionalidade implementada com rigor técnico e padrões enterprise</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🏦</div>
           <h3>Conta Pessoal</h3>
-          <p>Depósitos, saques e histórico de transações com validações robustas.</p>
+          <p>Depósitos, saques e histórico completo de transações com validações robustas de domínio.</p>
         </div>
-        <div class="feature">
+        <div class="feature-card">
+          <div class="feature-icon">💼</div>
           <h3>Conta Empresarial</h3>
-          <p>Empréstimos empresariais até R$ 10.000 com controle de limites.</p>
+          <p>Empréstimos empresariais até R$ 10.000 com controle de limites e aprovação automática.</p>
         </div>
-        <div class="feature">
+        <div class="feature-card">
+          <div class="feature-icon">🎁</div>
           <h3>Conta Bônus</h3>
-          <p>+10% de bônus em todo depósito. Recompensa automática.</p>
+          <p>+10% de bônus em todo depósito automaticamente. Recompensa programada via regra de negócio.</p>
         </div>
-        <div class="feature">
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
           <h3>Validações de Domínio</h3>
-          <p>Erros tipados: saldo insuficiente, conta inativa, valor inválido.</p>
+          <p>Erros tipados: saldo insuficiente, conta inativa, valor inválido, conta encerrada.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏗️</div>
+          <h3>Clean Architecture</h3>
+          <p>4 camadas isoladas: Domain, Application, Infrastructure, Presentation. Independência garantida.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>CI/CD Pipeline</h3>
+          <p>GitHub Actions com lint, testes e typecheck automáticos em cada pull request.</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="section">
-      <h2>🚀 Quick Start</h2>
-      <div class="code-block">
-        <div><span class="cmd">git clone</span> https://github.com/matheusflorindo32/dio-bank-pro.git</div>
-        <div><span class="cmd">cd</span> dio-bank-pro</div>
-        <div><span class="cmd">npm install</span></div>
-        <div><span class="cmd">npm run dev</span></div>
-        <div class="comment"># ou: npm test (39 testes automatizados)</div>
+  <section class="terminal-section" id="terminal">
+    <div class="container">
+      <div class="section-header">
+        <h2>Quick Start</h2>
+        <p>Clone, instale e execute em segundos</p>
+      </div>
+      <div class="terminal-wrapper">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dot dot-red"></div>
+            <div class="terminal-dot dot-yellow"></div>
+            <div class="terminal-dot dot-green"></div>
+            <span class="terminal-title">bash — dio-bank-pro</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-command"> git clone https://github.com/matheusflorindo32/dio-bank-pro.git</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-command"> cd dio-bank-pro</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-command"> npm install</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-command"> npm run dev</span>
+            </div>
+            <div class="terminal-line terminal-output">
+              🏦 DIO Bank Pro - Terminal<br>
+              ✅ Serviços inicializados com sucesso<br>
+              <span class="terminal-comment"># Pronto para operações bancárias</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-command"> npm test</span>
+              <span class="cursor"></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="section">
-      <h2>🛠️ Tech Stack</h2>
-      <div class="tech-stack">
-        <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TS"> TypeScript</div>
-        <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node"> Node.js</div>
-        <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitest/vitest-original.svg" alt="Vitest"> Vitest</div>
-        <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" alt="ESLint"> ESLint</div>
-        <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prettier/prettier-original.svg" alt="Prettier"> Prettier</div>
-        <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"> GitHub Actions</div>
+  <section class="tech-stack" id="stack">
+    <div class="container">
+      <div class="section-header">
+        <h2>Tech Stack</h2>
+        <p>Ferramentas modernas para código de qualidade enterprise</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+          <span>TypeScript</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+          <span>Node.js</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitest/vitest-original.svg" alt="Vitest">
+          <span>Vitest</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" alt="ESLint">
+          <span>ESLint</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prettier/prettier-original.svg" alt="Prettier">
+          <span>Prettier</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions">
+          <span>GitHub Actions</span>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="section">
-      <h2>🏛️ Arquitetura</h2>
-      <p>4 camadas bem definidas: <strong>Domain</strong> (entidades), <strong>Application</strong> (casos de uso), <strong>Infrastructure</strong> (repositórios, loggers) e <strong>Presentation</strong> (CLI/Console). Cada camada depende apenas da camada interna — nunca do exterior.</p>
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Pronto para explorar?</h2>
+        <p>Clone o repositório, execute os testes e veja uma aplicação bancária construída com padrões de produção.</p>
+        <div class="cta-actions">
+          <a href="https://github.com/matheusflorindo32/dio-bank-pro" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            Ver no GitHub
+          </a>
+          <a href="https://github.com/matheusflorindo32/dio-bank-pro#readme" class="btn btn-secondary">Documentação</a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="cta">
-      <a href="https://github.com/matheusflorindo32/dio-bank-pro">⭐ Ver no GitHub</a>
-      <a href="https://github.com/matheusflorindo32/dio-bank-pro#readme" class="secondary">📖 Documentação</a>
+  <footer>
+    <div class="container">
+      <p>© 2024 Matheus Florindo de Deus — <a href="./LICENSE">MIT License</a></p>
     </div>
-
-  </div>
-
-  <div class="footer">
-    <p>© 2024 Matheus Florindo de Deus — <a href="./LICENSE" style="color: var(--accent-secondary);">MIT License</a></p>
-  </div>
+  </footer>
 
 </body>
 </html>
