@@ -1,206 +1,432 @@
 <div align="center">
 
-<img src="./assets/banner.svg" alt="DIO Bank Pro Banner" width="100%" />
+<img src="./assets/banner.svg" width="100%" alt="DIO Bank Pro Banner" />
+
+<br><br>
+
+<!-- Dynamic Typing Effect -->
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=00F5D4&center=true&vCenter=true&width=800&lines=Clean+Architecture+Banking+System;SOLID+Principles+%E2%80%A2+TypeScript+Strict;39+Tests+Passing+%E2%80%A2+100%25+Type+Safe;Premium+Evolution+of+DIO+Challenge" alt="Typing SVG" />
+</a>
+
+<br><br>
+
+<!-- Neon Badges Row -->
+<p align="center">
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0a0e1a&color=00f5d4" alt="TypeScript" />
+  </a>
+  <a href="https://nodejs.org/">
+    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white&labelColor=0a0e1a&color=00bbf9" alt="Node.js" />
+  </a>
+  <a href="https://vitest.dev/">
+    <img src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white&labelColor=0a0e1a&color=9b5de5" alt="Vitest" />
+  </a>
+  <a href="https://github.com/features/actions">
+    <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white&labelColor=0a0e1a&color=ff6b35" alt="GitHub Actions" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://eslint.org/">
+    <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white&labelColor=0a0e1a&color=ffd700" alt="ESLint" />
+  </a>
+  <a href="https://prettier.io/">
+    <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black&labelColor=0a0e1a&color=00f5d4" alt="Prettier" />
+  </a>
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&labelColor=0a0e1a&color=00bbf9" alt="License" />
+  </a>
+  <a href="https://www.dio.me/">
+    <img src="https://img.shields.io/badge/DIO-Challenge-FF5722?style=for-the-badge&labelColor=0a0e1a&color=9b5de5" alt="DIO" />
+  </a>
+</p>
 
 <br>
 
-# 🏦 DIO Bank Pro
+<!-- GitHub Stats Cards -->
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=matheusflorindo32&repo=dio-bank-pro&theme=react&border_color=00f5d4&bg_color=0d1117&title_color=00f5d4&icon_color=00bbf9&text_color=c9d1d9&hide_border=false&border_radius=12" width="650" alt="DIO Bank Pro Repo Card" />
 
-### TypeScript Banking System
+<br><br>
 
-**Uma evolução premium do desafio DIO Bank, aplicando TypeScript, POO, SOLID, Clean Architecture, testes automatizados e documentação profissional.**
-
-<br>
-
-<!-- Badges -->
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=1a1a2e)](https://www.typescriptlang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white&labelColor=1a1a2e)](https://nodejs.org/)
-[![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white&labelColor=1a1a2e)](https://vitest.dev/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&labelColor=1a1a2e)](./LICENSE)
-[![Status](https://img.shields.io/badge/Status-✅%20Concluído-brightgreen?style=for-the-badge&labelColor=1a1a2e)]()
-[![DIO](https://img.shields.io/badge/DIO-Desafio-FF5722?style=for-the-badge&labelColor=1a1a2e)](https://www.dio.me/)
-
-<br>
-
-<!-- GitHub Stats -->
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=matheusflorindo32&repo=dio-bank-pro&theme=react&border_color=10a37f&bg_color=0d1117&title_color=10a37f&icon_color=10a37f&text_color=c9d1d9" width="500" />
+<!-- Profile Trophy -->
+<img src="https://github-profile-trophy.vercel.app/?username=matheusflorindo32&theme=algolia&no-frame=true&row=1&column=6&margin-w=15&margin-h=15" alt="GitHub Profile Trophy" />
 
 </div>
 
 ---
 
-## 📋 Índice
+<br>
 
-- [🎯 Sobre o Projeto](#-sobre-o-projeto)
-- [🎓 Desafio Original](#-desafio-original)
-- [✨ Funcionalidades](#-funcionalidades)
-- [🏗️ Arquitetura](#️-arquitetura)
-- [📊 Diagrama de Classes](#-diagrama-de-classes)
-- [🛠️ Tecnologias](#️-tecnologias)
-- [🚀 Como Executar](#-como-executar)
-- [🧪 Testes](#-testes)
-- [📁 Estrutura de Pastas](#-estrutura-de-pastas)
-- [💡 Exemplos de Uso](#-exemplos-de-uso)
-- [📈 Comparativo](#-comparativo)
-- [🏆 Qualidade de Código](#-qualidade-de-código)
-- [📚 Documentação](#-documentação)
-- [🔗 Links Úteis](#-links-úteis)
-- [👨‍💻 Autor](#-autor)
-- [📄 Licença](#-licença)
+<div align="center">
+
+## 🎬 Live Demo
+
+<img src="https://raw.githubusercontent.com/matheusflorindo32/dio-bank-pro/master/assets/demo-terminal.svg" width="80%" alt="Terminal Demo" />
+
+</div>
+
+<br>
 
 ---
 
-## 🎯 Sobre o Projeto
+## 🏛️ Architecture Overview
 
-O **DIO Bank Pro** nasceu do desafio básico da [Digital Innovation One (DIO)](https://www.dio.me/) e foi evoluído para uma **versão profissional** que demonstra domínio completo de:
+```mermaid
+graph TB
+    subgraph "🏗️ Presentation Layer"
+        CLI[CLI Interface]
+        Console[Console Demo]
+    end
+    
+    subgraph "⚙️ Application Layer"
+        AS[Account Service]
+        TS[Transaction Service]
+        LS[Loan Service]
+        DTO[DTOs]
+    end
+    
+    subgraph "💎 Domain Layer"
+        BA[Base Account]
+        DA[Dio Account]
+        CA[Company Account]
+        BOA[Bonus Account]
+        TR[Transaction]
+        ERR[Domain Errors]
+    end
+    
+    subgraph "🔧 Infrastructure Layer"
+        AR[Account Repository]
+        LG[Console Logger]
+        DB[(JSON Database)]
+    end
+    
+    CLI --> AS
+    Console --> AS
+    AS --> BA
+    TS --> BA
+    LS --> CA
+    AS --> AR
+    TS --> AR
+    LS --> AR
+    AR --> DB
+    BA --> TR
+    BA --> ERR
+    DA --> BA
+    CA --> BA
+    BOA --> BA
+```
 
-- **TypeScript** com configuração rigorosa
-- **Programação Orientada a Objetos** real (abstração, herança, encapsulamento, polimorfismo)
-- **Clean Architecture** com separação de responsabilidades
-- **Princípios SOLID** aplicados na prática
-- **Testes automatizados** com cobertura
-- **Documentação técnica** profissional
-
-> 💡 **Diferencial**: Este projeto não é apenas uma solução do desafio — é uma demonstração de como um desenvolvedor sênior estruturaria um sistema bancário real.
+<br>
 
 ---
 
-## 🎓 Desafio Original
+## ✨ Features Matrix
 
-Repositório base: [digitalinnovationone/desafio01-ts](https://github.com/digitalinnovationone/desafio01-ts)
-
-### Requisitos do Desafio
-
-| Requisito | Status | Implementação |
-|-----------|--------|---------------|
-| Métodos de depósito e saque na DioAccount | ✅ | `BaseAccount.deposit()` e `BaseAccount.withdraw()` |
-| Saque apenas para contas ativas com saldo | ✅ | Validação em `validateOperation()` |
-| Empréstimo na CompanyAccount | ✅ | `CompanyAccount.takeLoan()` |
-| Empréstimo apenas para contas ativas | ✅ | Validação de status ativo |
-| Nova conta com bônus de +10% no depósito | ✅ | `BonusAccount` com `bonusRate = 0.1` |
-| Atributos privados | ✅ | Todos os atributos sensíveis são `private` |
-| `name` e `accountNumber` imutáveis | ✅ | `readonly` no TypeScript |
-| Instâncias e execução no app.ts | ✅ | `src/main.ts` e `src/presentation/console/BankConsole.ts` |
-
----
-
-## ✨ Funcionalidades
+<div align="center">
 
 <table>
+<thead>
 <tr>
-<td width="50%">
+<th width="30%">🏦 Account Types</th>
+<th width="30%">💰 Transactions</th>
+<th width="30%">🛡️ Validations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-### 🏦 Contas Bancárias
-
-| Funcionalidade | Descrição | Status |
-|----------------|-----------|--------|
-| Conta Pessoal | DioAccount — depósito e saque padrão | ✅ |
-| Conta Empresarial | CompanyAccount — com empréstimo | ✅ |
-| Conta Bônus | BonusAccount — +10% em cada depósito | ✅ |
-| Ativação/Desativação | Controle de status da conta | ✅ |
+| Feature | Status |
+|---------|--------|
+| Personal Account | ✅ |
+| Company Account | ✅ |
+| Bonus Account (+10%) | ✅ |
+| Account Activation | ✅ |
+| Account Deactivation | ✅ |
 
 </td>
-<td width="50%">
+<td>
 
-### 💰 Transações
+| Feature | Status |
+|---------|--------|
+| Deposit | ✅ |
+| Withdraw | ✅ |
+| Loan (Business) | ✅ |
+| Transaction History | ✅ |
+| Bonus on Deposit | ✅ |
 
-| Funcionalidade | Descrição | Status |
-|----------------|-----------|--------|
-| Depósito | Adiciona valor ao saldo | ✅ |
-| Saque | Remove valor com validação | ✅ |
-| Empréstimo | Disponível para empresas | ✅ |
-| Histórico | Registro de todas as operações | ✅ |
-| Bônus | +10% em depósitos (conta bônus) | ✅ |
+</td>
+<td>
+
+| Validation | Error |
+|------------|-------|
+| Negative Amount | ❌ |
+| Insufficient Funds | ❌ |
+| Inactive Account | ❌ |
+| Closed Account | ❌ |
+| Loan Not Allowed | ❌ |
 
 </td>
 </tr>
+</tbody>
+</table>
+
+</div>
+
+<br>
+
+---
+
+## 🧪 Test Coverage
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/tests-39%2F39%20passing-brightgreen?style=for-the-badge&labelColor=0a0e1a&color=00f5d4" alt="Tests" />
+<img src="https://img.shields.io/badge/coverage-%3E90%25-brightgreen?style=for-the-badge&labelColor=0a0e1a&color=00bbf9" alt="Coverage" />
+<img src="https://img.shields.io/badge/typescript-strict-blue?style=for-the-badge&labelColor=0a0e1a&color=9b5de5" alt="TypeScript" />
+
+<br><br>
+
+<!-- Test Grid -->
+<table width="90%">
 <tr>
-<td width="50%">
+<td width="33%" valign="top">
 
-### 🛡️ Validações
+### 📝 Unit Tests
 
-| Validação | Implementação |
-|-----------|---------------|
-| Valor negativo | `InvalidAmountError` |
-| Saldo insuficiente | `InsufficientBalanceError` |
-| Conta inativa | `InactiveAccountError` |
-| Conta encerrada | `AccountClosedError` |
-| Campo imutável | `ImmutableFieldError` |
-| Conta não encontrada | `AccountNotFoundError` |
+- ✅ `DioAccount` — 10 tests
+- ✅ `CompanyAccount` — 6 tests  
+- ✅ `BonusAccount` — 6 tests
+- ✅ `AccountService` — 8 tests
+- ✅ `TransactionService` — 5 tests
+- ✅ `LoanService` — 4 tests
 
 </td>
-<td width="50%">
+<td width="33%" valign="top">
 
-### 🧪 Qualidade
+### 🎯 Test Patterns
 
-| Aspecto | Implementação |
-|---------|---------------|
-| Testes Unitários | 100% das entidades |
-| Testes de Serviço | Account, Transaction, Loan |
-| TypeScript Strict | `strict: true` |
-| ESLint | Regras recomendadas |
-| Prettier | Formatação automática |
-| CI/CD | GitHub Actions |
+- 🔄 Arrange → Act → Assert
+- 🎭 Isolated with `beforeEach`
+- 📦 Dependency Injection
+- 🎨 Domain Error Testing
+- 🧩 Mock Repositories
+
+</td>
+<td width="33%" valign="top">
+
+### 📊 Quality Metrics
+
+| Metric | Value |
+|--------|-------|
+| Total Tests | 39 |
+| Passing | 39 |
+| Failing | 0 |
+| Type Errors | 0 |
+| Lint Warnings | 0 |
 
 </td>
 </tr>
 </table>
 
----
+</div>
 
-## 🏗️ Arquitetura
-
-```
-dio-bank-pro/
-├── src/
-│   ├── domain/           ← Entidades e regras de negócio
-│   │   ├── entities/     ← Contas, Transações
-│   │   ├── repositories/ ← Interfaces de persistência
-│   │   └── errors/       ← Erros de domínio
-│   │
-│   ├── application/      ← Casos de uso e serviços
-│   │   ├── dto/          ← Objetos de transferência
-│   │   ├── services/     ← Account, Transaction, Loan
-│   │   └── use-cases/    ← Operações específicas
-│   │
-│   ├── infrastructure/   ← Implementações técnicas
-│   │   ├── database/     ← Persistência
-│   │   ├── repositories/ ← Repositórios concretos
-│   │   └── logger/       ← Logging
-│   │
-│   ├── presentation/     ← Interface com usuário
-│   │   ├── cli/          ← CLI interativa
-│   │   └── console/      ← Demo em terminal
-│   │
-│   └── shared/           ← Utilitários compartilhados
-│       ├── enums/        ← TransactionType, AccountStatus...
-│       ├── types/        ← Interfaces TypeScript
-│       └── utils/        ← Formatadores, helpers
-│
-├── tests/                ← Testes
-│   ├── unit/             ← Testes unitários
-│   └── integration/      ← Testes de integração
-│
-└── docs/                 ← Documentação técnica
-    ├── architecture.md   ← Arquitetura detalhada
-    ├── class-diagram.md  ← Diagrama de classes
-    ├── decisions.md      ← Decisões técnicas
-    └── roadmap.md        ← Roadmap futuro
-```
-
-### Princípios SOLID Aplicados
-
-| Princípio | Aplicação no Projeto |
-|-----------|---------------------|
-| **S**ingle Responsibility | `AccountService` cria contas, `TransactionService` opera transações |
-| **O**pen/Closed | Novos tipos de conta extendem `BaseAccount` sem modificar código |
-| **L**iskov Substitution | `BonusAccount` substitui `BaseAccount` sem quebrar contratos |
-| **I**nterface Segregation | `IAccountRepository` é focada e minimalista |
-| **D**ependency Inversion | Serviços dependem de `IAccountRepository`, não da implementação |
+<br>
 
 ---
 
-## 📊 Diagrama de Classes
+## 🚀 Quick Start
+
+<div align="center">
+
+<!-- Terminal Style Code Block -->
+
+```bash
+# 🚀 Clone the repository
+git clone https://github.com/matheusflorindo32/dio-bank-pro.git
+
+# 📁 Navigate to project
+cd dio-bank-pro
+
+# 📦 Install dependencies
+npm install
+
+# ▶️ Run the application
+npm run dev
+
+# 🧪 Run tests
+npm test
+
+# 🧪 Run tests with coverage
+npm run test:coverage
+```
+
+</div>
+
+<br>
+
+---
+
+## 📊 Performance & Quality
+
+<div align="center">
+
+<!-- GitHub Stats -->
+<img src="https://github-readme-stats.vercel.app/api?username=matheusflorindo32&show_icons=true&theme=react&border_color=00f5d4&bg_color=0d1117&title_color=00f5d4&icon_color=00bbf9&text_color=c9d1d9&hide_border=false&border_radius=12&include_all_commits=true&count_private=true" width="49%" alt="GitHub Stats" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=matheusflorindo32&theme=react&border=00f5d4&background=0d1117&stroke=00f5d4&ring=00f5d4&fire=ff6b35&currStreakNum=00f5d4&sideNums=00bbf9&currStreakLabel=00f5d4&sideLabels=c9d1d9&dates=8b949e" width="49%" alt="GitHub Streak" />
+
+<br><br>
+
+<!-- Language Stats -->
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusflorindo32&layout=compact&theme=react&border_color=00f5d4&bg_color=0d1117&title_color=00f5d4&text_color=c9d1d9&hide_border=false&border_radius=12&langs_count=8" width="50%" alt="Top Languages" />
+
+</div>
+
+<br>
+
+---
+
+## 🔧 Tech Stack
+
+<div align="center">
+
+<!-- Skill Icons Grid -->
+<img src="https://skillicons.dev/icons?i=ts,nodejs,vite,github,git,vscode&theme=dark&perline=6" alt="Tech Stack" />
+
+<br><br>
+
+<!-- Additional Tools -->
+<img src="https://skillicons.dev/icons?i=linux,bash,npm,yarn&theme=dark&perline=4" alt="Additional Tools" />
+
+</div>
+
+<br>
+
+---
+
+## 📈 Comparison: Original vs Pro
+
+<div align="center">
+
+<table width="90%">
+<thead>
+<tr>
+<th width="25%">Aspect</th>
+<th width="30%">Original Challenge</th>
+<th width="35%">🏆 DIO Bank Pro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>Architecture</b></td>
+<td>Single Script</td>
+<td>✨ Clean Architecture (4 Layers)</td>
+</tr>
+<tr>
+<td><b>OOP</b></td>
+<td>Basic Classes</td>
+<td>✨ Abstraction, Inheritance, Polymorphism</td>
+</tr>
+<tr>
+<td><b>TypeScript</b></td>
+<td>Standard Config</td>
+<td>✨ Strict Mode, No Implicit Any</td>
+</tr>
+<tr>
+<td><b>Testing</b></td>
+<td>None</td>
+<td>✨ 39 Automated Tests</td>
+</tr>
+<tr>
+<td><b>CI/CD</b></td>
+<td>None</td>
+<td>✨ GitHub Actions</td>
+</tr>
+<tr>
+<td><b>Documentation</b></td>
+<td>Minimal</td>
+<td>✨ Full Technical Docs + Diagrams</td>
+</tr>
+<tr>
+<td><b>Error Handling</b></td>
+<td>Console.log</td>
+<td>✨ Domain Errors with Codes</td>
+</tr>
+<tr>
+<td><b>Logging</b></td>
+<td>None</td>
+<td>✨ Structured Console Logger</td>
+</tr>
+<tr>
+<td><b>Code Quality</b></td>
+<td>Basic</td>
+<td>✨ ESLint + Prettier + Type Strict</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<br>
+
+---
+
+## 🗂️ Project Structure
+
+<div align="center">
+
+```
+🌳 dio-bank-pro
+├── 📂 src/
+│   ├── 💎 domain/              ← Core Business Logic
+│   │   ├── 🏦 entities/
+│   │   │   ├── 📄 BaseAccount.ts
+│   │   │   ├── 📄 DioAccount.ts
+│   │   │   ├── 📄 CompanyAccount.ts
+│   │   │   ├── 📄 BonusAccount.ts
+│   │   │   └── 📄 Transaction.ts
+│   │   ├── 🗄️ repositories/
+│   │   │   └── 📄 IAccountRepository.ts
+│   │   └── ⚠️ errors/
+│   │       └── 📄 DomainError.ts
+│   │
+│   ├── ⚙️ application/         ← Use Cases & Services
+│   │   ├── 📄 AccountService.ts
+│   │   ├── 📄 TransactionService.ts
+│   │   ├── 📄 LoanService.ts
+│   │   └── 📂 dto/
+│   │       └── 📄 AccountDTOs.ts
+│   │
+│   ├── 🔧 infrastructure/    ← Technical Implementations
+│   │   ├── 🗄️ repositories/
+│   │   │   └── 📄 AccountRepository.ts
+│   │   └── 📝 logger/
+│   │       └── 📄 ConsoleLogger.ts
+│   │
+│   ├── 🎨 presentation/      ← User Interfaces
+│   │   └── 📄 BankConsole.ts
+│   │
+│   └── 📂 shared/            ← Utilities
+│       ├── 📂 enums/
+│       ├── 📂 types/
+│       └── 📂 utils/
+│
+├── 🧪 tests/                 ← Test Suite
+├── 📚 docs/                  ← Technical Documentation
+├── 🎨 assets/                ← Visual Assets
+└── ⚙️ configs                ← TypeScript, ESLint, Vitest
+```
+
+</div>
+
+<br>
+
+---
+
+## 🎨 Class Diagram
+
+<div align="center">
 
 ```mermaid
 classDiagram
@@ -215,222 +441,86 @@ classDiagram
         +getAccountInfo()* Record
     }
     
-    class DioAccount
-    class CompanyAccount {
-        +takeLoan(amount) ITransaction
-    }
-    class BonusAccount {
+    class DioAccount {
         +deposit(amount) ITransaction
+        +withdraw(amount) ITransaction
+        +getAccountInfo() Record
+    }
+    
+    class CompanyAccount {
+        -_loanLimit: number
+        -_totalLoaned: number
+        +loanLimit: number
+        +totalLoaned: number
+        +availableLoan: number
+        +takeLoan(amount) ITransaction
+        +getAccountInfo() Record
+    }
+    
+    class BonusAccount {
+        -_bonusRate: number
+        +bonusRate: number
+        +deposit(amount) ITransaction
+        +getAccountInfo() Record
+    }
+    
+    class Transaction {
+        +readonly id: string
+        +readonly type: TransactionType
+        +readonly amount: number
+        +readonly timestamp: Date
+        +readonly description: string
+        +readonly balanceAfter: number
     }
     
     BaseAccount <|-- DioAccount
     BaseAccount <|-- CompanyAccount
     BaseAccount <|-- BonusAccount
+    BaseAccount --> Transaction
 ```
-
-> 📖 Veja o diagrama completo em [`docs/class-diagram.md`](./docs/class-diagram.md)
-
----
-
-## 🛠️ Tecnologias
-
-<div align="center">
-
-| Tecnologia | Versão | Uso |
-|------------|--------|-----|
-| ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white) | ^5.4.5 | Linguagem principal |
-| ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white) | ≥18.0.0 | Runtime |
-| ![Vitest](https://img.shields.io/badge/-Vitest-6E9F18?logo=vitest&logoColor=white) | ^1.5.0 | Testes |
-| ![ESLint](https://img.shields.io/badge/-ESLint-4B32C3?logo=eslint&logoColor=white) | ^8.57.0 | Linting |
-| ![Prettier](https://img.shields.io/badge/-Prettier-F7B93E?logo=prettier&logoColor=black) | ^3.2.5 | Formatação |
-| ![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?logo=github-actions&logoColor=white) | - | CI/CD |
 
 </div>
 
----
-
-## 🚀 Como Executar
-
-### Pré-requisitos
-
-- [Node.js](https://nodejs.org/) ≥ 18.0.0
-- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
-
-### Instalação
-
-```bash
-# Clone o repositório
-git clone https://github.com/matheusflorindo32/dio-bank-pro.git
-
-# Entre no diretório
-cd dio-bank-pro
-
-# Instale as dependências
-npm install
-```
-
-### Scripts Disponíveis
-
-```bash
-# Executar aplicação em desenvolvimento
-npm run dev
-
-# Compilar TypeScript
-npm run build
-
-# Executar versão compilada
-npm start
-
-# Executar testes
-npm test
-
-# Executar testes com watch
-npm run test:watch
-
-# Gerar relatório de cobertura
-npm run test:coverage
-
-# Verificar tipos
-npm run typecheck
-
-# Linting
-npm run lint
-
-# Formatação
-npm run format
-```
-
-### Demonstração no Terminal
-
-```bash
-npm run dev
-```
-
-Saída esperada:
-
-```
-🏦 DIO Bank Pro - Terminal
-
-📥 Depósitos:
-  João Silva: +R$ 1.000,00
-  Tech Solutions: +R$ 5.000,00
-  Maria Santos: +R$ 500,00 (com bônus)
-
-📤 Saques:
-  João Silva: -R$ 200,00
-
-💰 Empréstimo:
-  Tech Solutions: +R$ 2.000,00 (empréstimo)
-
-✅ Operações concluídas com sucesso!
-```
+<br>
 
 ---
 
-## 🧪 Testes
+## 📦 Available Scripts
 
-O projeto possui **testes unitários** cobrindo todas as entidades e serviços:
+<div align="center">
 
-```bash
-# Rodar todos os testes
-npm test
+<table width="80%">
+<tr>
+<td>
 
-# Com cobertura
-npm run test:coverage
-```
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | 🚀 Run development mode |
+| `npm run build` | 📦 Build for production |
+| `npm start` | ▶️ Start production build |
+| `npm test` | 🧪 Run all tests |
+| `npm run test:watch` | 👀 Run tests in watch mode |
+| `npm run test:coverage` | 📊 Generate coverage report |
+| `npm run lint` | 🔍 Run ESLint |
+| `npm run lint:fix` | 🔧 Fix ESLint issues |
+| `npm run format` | ✨ Format with Prettier |
+| `npm run typecheck` | ✅ Check TypeScript types |
+| `npm run clean` | 🗑️ Clean dist folder |
 
-### Cobertura
+</td>
+</tr>
+</table>
 
-| Módulo | Testes |
-|--------|--------|
-| DioAccount | Depósito, saque, validações, imutabilidade |
-| CompanyAccount | Empréstimo, limites, múltiplos empréstimos |
-| BonusAccount | Bônus de +10%, transações duplas |
-| AccountService | CRUD, ativação, buscas |
-| TransactionService | Depósito, saque, histórico |
-| LoanService | Empréstimo empresarial, validações |
+</div>
 
----
-
-## 📁 Estrutura de Pastas
-
-```
-dio-bank-pro/
-├── .github/
-│   └── workflows/
-│       └── ci.yml              # CI/CD GitHub Actions
-├── docs/
-│   ├── architecture.md         # Arquitetura detalhada
-│   ├── class-diagram.md        # Diagrama de classes Mermaid
-│   ├── decisions.md            # Decisões técnicas
-│   └── roadmap.md              # Roadmap futuro
-├── src/
-│   ├── domain/
-│   │   ├── entities/
-│   │   │   ├── accounts/
-│   │   │   │   ├── BaseAccount.ts
-│   │   │   │   ├── DioAccount.ts
-│   │   │   │   ├── CompanyAccount.ts
-│   │   │   │   └── BonusAccount.ts
-│   │   │   └── transactions/
-│   │   │       └── Transaction.ts
-│   │   ├── repositories/
-│   │   │   └── IAccountRepository.ts
-│   │   └── errors/
-│   │       └── DomainError.ts
-│   ├── application/
-│   │   ├── dto/
-│   │   │   └── AccountDTOs.ts
-│   │   └── services/
-│   │       ├── AccountService.ts
-│   │       ├── TransactionService.ts
-│   │       └── LoanService.ts
-│   ├── infrastructure/
-│   │   ├── repositories/
-│   │   │   └── AccountRepository.ts
-│   │   └── logger/
-│   │       └── ConsoleLogger.ts
-│   ├── presentation/
-│   │   └── console/
-│   │       └── BankConsole.ts
-│   ├── shared/
-│   │   ├── enums/
-│   │   │   ├── AccountStatus.ts
-│   │   │   ├── AccountType.ts
-│   │   │   └── TransactionType.ts
-│   │   ├── types/
-│   │   │   ├── Account.ts
-│   │   │   └── Transaction.ts
-│   │   └── utils/
-│   │       └── formatters.ts
-│   └── main.ts
-├── tests/
-│   └── unit/
-│       ├── DioAccount.test.ts
-│       ├── CompanyAccount.test.ts
-│       ├── BonusAccount.test.ts
-│       ├── AccountService.test.ts
-│       ├── TransactionService.test.ts
-│       └── LoanService.test.ts
-├── .editorconfig
-├── .eslintrc.cjs
-├── .gitignore
-├── .prettierrc
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── README.md
-├── SECURITY.md
-├── package.json
-├── tsconfig.json
-└── vitest.config.ts
-```
+<br>
 
 ---
 
-## 💡 Exemplos de Uso
+## 🧩 Code Examples
 
-### Criar Conta Pessoal
+<details>
+<summary><b>🏦 Creating Accounts</b> — Click to expand</summary>
 
 ```typescript
 import { AccountService } from './src/application/services/AccountService'
@@ -438,52 +528,74 @@ import { AccountRepository } from './src/infrastructure/repositories/AccountRepo
 
 const service = new AccountService(new AccountRepository())
 
-const account = service.createAccount({
+// Personal Account
+const personal = service.createAccount({
   name: 'João Silva',
   accountType: 'PERSONAL',
   initialBalance: 1000
 })
 
-service.activateAccount(account.accountNumber)
-console.log(`Conta ${account.accountNumber} criada com saldo ${account.getBalance()}`)
+// Company Account
+const company = service.createAccount({
+  name: 'Tech Solutions',
+  accountType: 'COMPANY'
+})
+
+// Bonus Account (+10% on deposits)
+const bonus = service.createAccount({
+  name: 'Maria Santos',
+  accountType: 'BONUS'
+})
 ```
 
-### Depósito e Saque
+</details>
+
+<details>
+<summary><b>💰 Transactions</b> — Click to expand</summary>
 
 ```typescript
 import { TransactionService } from './src/application/services/TransactionService'
 
 const txService = new TransactionService(repository)
 
-// Depósito
+// Deposit
 txService.deposit({ accountNumber: 123456, amount: 500 })
 
-// Saque
+// Withdraw
 txService.withdraw({ accountNumber: 123456, amount: 200 })
 
-// Consultar saldo
+// Check balance
 const balance = txService.getBalance(123456)
-console.log(`Saldo atual: ${balance}`)
+
+// Transaction history
+const history = txService.getTransactionHistory(123456)
 ```
 
-### Empréstimo Empresarial
+</details>
+
+<details>
+<summary><b>💼 Business Loans</b> — Click to expand</summary>
 
 ```typescript
 import { LoanService } from './src/application/services/LoanService'
 
 const loanService = new LoanService(repository)
 
-// Apenas CompanyAccount pode fazer empréstimo
+// Only CompanyAccount can take loans
 loanService.takeLoan({ accountNumber: 100001, amount: 3000 })
 
-// Consultar limites
+// Check loan info
 const info = loanService.getLoanInfo(100001)
-console.log(`Limite: ${info.loanLimit}, Disponível: ${info.availableLoan}`)
+console.log(info.availableLoan) // Remaining limit
 ```
 
-### Conta Bônus
+</details>
+
+<details>
+<summary><b>🎁 Bonus Account</b> — Click to expand</summary>
 
 ```typescript
+// BonusAccount adds +10% on every deposit
 const bonusAccount = service.createAccount({
   name: 'Maria Santos',
   accountType: 'BONUS'
@@ -491,102 +603,166 @@ const bonusAccount = service.createAccount({
 
 service.activateAccount(bonusAccount.accountNumber)
 
-// Depósito de 500 gera bônus de 50 (10%)
+// Deposit 500 → Balance becomes 550 (bonus: 50)
 bonusAccount.deposit(500)
-console.log(`Saldo: ${bonusAccount.getBalance()}`) // 550
+console.log(bonusAccount.getBalance()) // 550
 ```
 
----
+</details>
 
-## 📈 Comparativo
-
-| Aspecto | Projeto Original | DIO Bank Pro |
-|---------|-----------------|--------------|
-| **Arquitetura** | Script único | Clean Architecture |
-| **POO** | Básica | Abstração, Herança, Polimorfismo |
-| **TypeScript** | Configuração padrão | Strict mode |
-| **Testes** | Nenhum | Unitários + Integração |
-| **CI/CD** | Nenhum | GitHub Actions |
-| **Documentação** | Mínima | Completa + Diagramas |
-| **Erros** | Console.log | Domain Errors tipados |
-| **Persistência** | Memória | Repositório com interface |
-| **Logging** | Nenhum | Logger estruturado |
-| **DTOs** | Nenhum | Tipagem de entrada |
-| **ESLint/Prettier** | Nenhum | Configurado |
-| **Roadmap** | Nenhum | Documentado |
+<br>
 
 ---
 
-## 🏆 Qualidade de Código
-
-### Padrões Aplicados
-
-- ✅ **SOLID**: Todos os 5 princípios
-- ✅ **Clean Architecture**: 4 camadas desacopladas
-- ✅ **DRY**: Sem repetição de código
-- ✅ **KISS**: Soluções simples e diretas
-- ✅ **YAGNI**: Sem funcionalidades desnecessárias
-
-### Métricas
-
-| Métrica | Valor |
-|---------|-------|
-| Cobertura de testes | > 90% |
-| TypeScript strict | Ativado |
-| ESLint | 0 warnings |
-| Prettier | Formatado |
-| Documentação | Completa |
-
----
-
-## 📚 Documentação
-
-- [`docs/architecture.md`](./docs/architecture.md) — Arquitetura detalhada
-- [`docs/class-diagram.md`](./docs/class-diagram.md) — Diagrama de classes completo
-- [`docs/decisions.md`](./docs/decisions.md) — Decisões técnicas e trade-offs
-- [`docs/roadmap.md`](./docs/roadmap.md) — Roadmap de evolução
-- [`CHANGELOG.md`](./CHANGELOG.md) — Histórico de versões
-- [`CONTRIBUTING.md`](./CONTRIBUTING.md) — Como contribuir
-- [`SECURITY.md`](./SECURITY.md) — Política de segurança
-
----
-
-## 🔗 Links Úteis
-
-| Recurso | Link |
-|---------|------|
-| 🏠 Repositório | [github.com/matheusflorindo32/dio-bank-pro](https://github.com/matheusflorindo32/dio-bank-pro) |
-| 🎓 Desafio DIO | [github.com/digitalinnovationone/desafio01-ts](https://github.com/digitalinnovationone/desafio01-ts) |
-| 💼 Portfólio | [github.com/matheusflorindo32](https://github.com/matheusflorindo32) |
-| 💬 LinkedIn | [linkedin.com/in/matheusflorindo](https://linkedin.com/in/matheusflorindo) *(adicione seu link)* |
-
----
-
-## 👨‍💻 Autor
+## 🏆 Challenge Requirements
 
 <div align="center">
 
-**Matheus Florindo de Deus**
-
-💻 Desenvolvedor Full Stack | 🎖️ Policial Militar | 📚 Pesquisador
-
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/matheusflorindo32)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-florindo-de-deus-b953b017a/)
-
-*Projeto desenvolvido como evolução do desafio da Digital Innovation One.*
+<table width="80%">
+<tr>
+<th width="50%">Requirement</th>
+<th width="20%">Status</th>
+<th width="30%">Implementation</th>
+</tr>
+<tr>
+<td>Deposit & Withdraw methods in DioAccount</td>
+<td>✅</td>
+<td><code>BaseAccount.deposit()</code> & <code>withdraw()</code></td>
+</tr>
+<tr>
+<td>Withdraw only for active accounts with balance</td>
+<td>✅</td>
+<td><code>validateOperation()</code> checks status & balance</td>
+</tr>
+<tr>
+<td>Loan in CompanyAccount</td>
+<td>✅</td>
+<td><code>CompanyAccount.takeLoan()</code></td>
+</tr>
+<tr>
+<td>Loan only for active accounts</td>
+<td>✅</td>
+<td>Validation before loan processing</td>
+</tr>
+<tr>
+<td>New account type with +10% deposit bonus</td>
+<td>✅</td>
+<td><code>BonusAccount</code> with <code>bonusRate = 0.1</code></td>
+</tr>
+<tr>
+<td>All attributes private</td>
+<td>✅</td>
+<td>TypeScript <code>private</code> modifier</td>
+</tr>
+<tr>
+<td>Immutable name and accountNumber</td>
+<td>✅</td>
+<td>TypeScript <code>readonly</code></td>
+</tr>
+<tr>
+<td>Instances and execution in app.ts</td>
+<td>✅</td>
+<td><code>src/main.ts</code> & <code>BankConsole.ts</code></td>
+</tr>
+</table>
 
 </div>
 
+<br>
+
 ---
 
-## 📄 Licença
+## 📚 Documentation
 
-Este projeto está licenciado sob a [Licença MIT](./LICENSE).
+<div align="center">
+
+<table width="80%">
+<tr>
+<td width="25%" align="center">
+
+<a href="./docs/architecture.md">
+<img src="https://img.shields.io/badge/📐-Architecture-blue?style=for-the-badge&labelColor=0a0e1a&color=00f5d4" alt="Architecture" />
+</a>
+
+</td>
+<td width="25%" align="center">
+
+<a href="./docs/class-diagram.md">
+<img src="https://img.shields.io/badge/📊-Class_Diagram-blue?style=for-the-badge&labelColor=0a0e1a&color=00bbf9" alt="Class Diagram" />
+</a>
+
+</td>
+<td width="25%" align="center">
+
+<a href="./docs/decisions.md">
+<img src="https://img.shields.io/badge/🧠-Decisions-blue?style=for-the-badge&labelColor=0a0e1a&color=9b5de5" alt="Decisions" />
+</a>
+
+</td>
+<td width="25%" align="center">
+
+<a href="./docs/roadmap.md">
+<img src="https://img.shields.io/badge/🗺️-Roadmap-blue?style=for-the-badge&labelColor=0a0e1a&color=ff6b35" alt="Roadmap" />
+</a>
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<br>
+
+---
+
+## 👨‍💻 Author
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Matheus_Florindo-Developer-00f5d4?style=for-the-badge&labelColor=0a0e1a" alt="Author" />
+
+<br><br>
+
+**Matheus Florindo de Deus**
+
+💻 Full Stack Developer | 🎖️ Military Police | 📚 Researcher
+
+<br>
+
+<a href="https://github.com/matheusflorindo32">
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0e1a&color=00f5d4" alt="GitHub" />
+</a>
+<a href="https://www.linkedin.com/in/matheus-florindo-de-deus-b953b017a/">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0a0e1a&color=00bbf9" alt="LinkedIn" />
+</a>
+<a href="mailto:matheusdideusf@gmail.com">
+  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0a0e1a&color=9b5de5" alt="Email" />
+</a>
+
+<br><br>
+
+<!-- Profile Views -->
+<img src="https://komarev.com/ghpvc/?username=matheusflorindo32&color=00f5d4&style=flat-square&label=Profile+Views" alt="Profile Views" />
+
+</div>
+
+<br>
 
 ---
 
 <div align="center">
 
-⭐ **Se este projeto te ajudou, deixe uma star!** ⭐
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+<br>
+
+⭐ **If this project helped you, please give it a star!** ⭐
+
+<br>
+
+<!-- Footer Wave -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00f5d4,50:00bbf9,100:9b5de5&height=120&section=footer&text=Thank%20You!&fontSize=24&fontColor=ffffff&animation=fadeIn" width="100%" alt="Footer" />
 
 </div>
