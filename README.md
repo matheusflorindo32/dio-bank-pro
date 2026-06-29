@@ -471,7 +471,7 @@ console.log(bonusAccount.getBalance()) // 550
 
 **Matheus Florindo de Deus**
 
-💻 Full Stack Developer | 🎖️ Military Police | 📚 Researcher
+🎓 Student of Systems Analysis and Development — IFES | 🎓 Licensed in Physical Education — UniVitória | 💻 Full Stack Developer | 📚 Researcher
 
 <br>
 
